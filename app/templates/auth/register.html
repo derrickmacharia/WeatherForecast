@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+{% endblock %}
+
+
+{% block content %}
+<body class="register">
+<div class="container mt-5">
+<div class="row">
+<div class="col-md-3"> </div>
+<div class="col-md-6">
+
+{{wtf.quick_form(registration_form,button_map={'submit':'danger'})}}
+
+</div>
+<div class="col-md-3"></div>
+</div>
+</div>
+</body>
+
+{% endblock%}

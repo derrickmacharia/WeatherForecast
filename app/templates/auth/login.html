@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+{% endblock %}
+
+{% block content %}
+<body class="login">
+<div class="container mt-5 "> 
+    <div class="row">
+      <div class= "col-md-3"> </div>
+      <div class="col-md-6">
+      <!--Flash message -->
+      {% for message in get_flashed_messages() %}
+        <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+        </div>
+      {% endfor %}
+      <!-- Login form -->
+      {{wtf.quick_form(login_form,button_map={'submit':'danger'})}}
+      <p> Don't have an account? <a href="{{url_for('auth.register')}}">Sign up here</a></p>
+     </div>
+     <div clas="col-md-3"> </div>
+    </div>
+</div>
+</body>
+{% endblock%}
