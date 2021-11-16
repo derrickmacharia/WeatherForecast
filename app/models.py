@@ -42,3 +42,16 @@ class User(UserMixin,db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+    
+class Weather:
+    '''
+    Weather class to define Movie Objects
+    '''
+
+    def __init__(self,latitude,longitude,country,locality,region,street):
+        self.latitude =latitude
+        self.longitude = longitude
+        self.country= country
+        self.locality = locality
+        self.region = region
+        self.street = street

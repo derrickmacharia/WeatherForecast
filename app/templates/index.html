@@ -12,6 +12,15 @@
 
 <body>
     <h1>Welcome to weather forecast</h1>
+   
+        <!--weather_today section  -->
+        <h3> weather_today</h3>
+         <ul>
+            {% for weather_today in weather %}
+                <li>{{ weather_today.country}}</li>
+            {% endfor %}
+        </ul>
+
     
 </body>
 

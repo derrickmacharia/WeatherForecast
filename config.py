@@ -16,6 +16,7 @@ class Config:
     # simple mde  configurations
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
+    WEATHER_API_BASE_URL ='http://api.positionstack.com/v1/forward/api_key={}'
 
     @staticmethod
     def init_app(app):

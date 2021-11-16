@@ -7,6 +7,7 @@ from flask import render_template,request,redirect,url_for,abort
 from ..models import User
 from .forms import UpdateProfile
 from .. import db,photos
+from ..request import get_weather
 
 
 @main.route('/')
@@ -14,8 +15,10 @@ def index():
     '''
     View root page function that returns the index page and its data.
     '''
+    weather_today = get_weather('weather')
     title = 'WeatherForecast'
-    return render_template('index.html', title = title)
+    return render_template('index.html', title = title, weather = weather_today)
+
 
     
 @main.route('/user/<uname>')
