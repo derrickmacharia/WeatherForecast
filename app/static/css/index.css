@@ -2,7 +2,7 @@ h1{
     color: blueviolet;
 }
 .register{
-    background-image: url(../images/rainy.jpg);
+    background-image: url(../images/location.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@ h1{
     background: transparent ;
 }
 .login{
-    background-image: url(../images/sunny.jpeg);
+    background-image: url(../images/sky2.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
