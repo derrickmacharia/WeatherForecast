@@ -6,8 +6,42 @@ h1{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 1;
+    height: 100vh;
+    
+
 
 }
-/* .login{
+.voldermort{
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    z-index: 3;
+    width: 75%;
+    margin-top: 8rem;
+}
+.kemikal{
+    background: transparent ;
+}
+.login{
+    background-image: url(../images/sunny.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 
-} */
+
+}
+.sativa{
+    margin-top: 15rem;    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    z-index: 3;
+    width: 75%;
+}  
