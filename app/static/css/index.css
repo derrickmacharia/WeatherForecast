@@ -15,7 +15,7 @@ h1{
 .voldermort{
     padding: 2rem;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     border-top: 2px solid rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     color: #fff;
@@ -36,9 +36,10 @@ h1{
 
 }
 .sativa{
-    margin-top: 15rem;    padding: 2rem;
+    margin-top: 15rem;
+    padding: 2rem;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
     border-top: 2px solid rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     color: #fff;

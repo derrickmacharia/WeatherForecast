@@ -12,6 +12,20 @@
 
 <body>
     <h1>Welcome to weather forecast</h1>
+
+
+    <form method="post">
+      <input type="text" name="place" placeholder="Search for a Movie" class="form-control">
+      <input type="submit"  value="Submit" class="btn btn-default">
+  </form>
+    
+    <ul>
+      <li>Humidity:{{ data.humidity }}</li>
+      <li>Latitude:{{ data.latitude }}</li>
+      <li>Pressure:{{ data.pressure }}</li>
+      <li>Temperature:{{ data.temperature }}</li>
+
+    </ul>
     
 </body>
 
