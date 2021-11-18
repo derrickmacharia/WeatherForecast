@@ -12,26 +12,19 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="/search">Saerch</a></li>
+                <li><a href="/search">Search</a></li>
             </ul>
-            <li>
-                <a href="/search" class="tag" style="color: #EEC390;">Search</a>
-            </li>
-            <ul class="nav navbar-nav navbar-right">
             
             <ul class="nav navbar-nav navbar-right ">
                 {% if current_user.is_authenticated %}
                 <li class="user"><a href="{{url_for('main.profile',uname=current_user.username)}}"><i class="fa fa-user" aria-hidden="true"></i>   {{current_user.username}}</a></li>
                 <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
                 {% else %}
-                <li class="nav-link"><a  href="{{url_for('auth.login')}}">Sign in</a></li>
+                <li class="nav-link"><a href="{{url_for('auth.login')}}">Sign in</a></li>
                 {%endif%}
             </ul>
         </div>
     </div>
-<<<<<<< HEAD
   </div>
   
-=======
 </div>
->>>>>>> 30a3e4b947d931a7f2f03217e565c3528ae6c28a

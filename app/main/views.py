@@ -24,38 +24,6 @@ def index():
     return render_template('index.html', title = title)
 
 
-
-@main.route('/search',methods=['GET','POST'])
-def search():
-    '''
-    View root page function that returns the index page and its data.
-    '''
-    title = 'WeatherForecast'
-
-    city = "Nairobi"
-
-
-    base_url = "https://api.openweathermap.org/data/2.5/weather?appid="+Config.API_Key+"&q=" + city
-
-    weather_data = requests.get(base_url).json()
-    pprint(Util.parse_weather_data(weather_data))
-    data = Util.parse_weather_data(weather_data)
-
-    if request.method == 'POST':
-
-        city = request.form.get("place")
-
-       
-
-        base_url = "https://api.openweathermap.org/data/2.5/weather?appid="+Config.API_Key+"&q=" + city
-
-        weather_data = requests.get(base_url).json()
-
-        pprint(Util.parse_weather_data(weather_data))
-        data = Util.parse_weather_data(weather_data)
-    return render_template('index.html',data = data)
-
-
 @main.route('/search',methods=['GET','POST'])
 def search():
     '''

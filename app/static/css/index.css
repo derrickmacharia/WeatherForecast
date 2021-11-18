@@ -51,7 +51,7 @@
     width: 75%;
 }  
 .profile{
-    background-image: url(../images/sunny.jpeg);
+    background-image: url(../images/jacky.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -83,8 +83,12 @@
     margin-left: 8rem;
 }
 
-/* .update{
-    background-image: url(../images/dusk.jpeg);
+ .update{
+    background-image: url(../images/star.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 ul li {
@@ -112,29 +116,54 @@ ul li {
 
 }
 .upd{
-    padding: 2rem;
+    /* padding: 2rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.3);
     border-top: 2px solid rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     color: #fff;
-    z-index: 3;
+    z-index: 3; */
     width: 75%;
     margin-top: 15rem;
 }
 .date{
-    margin-top: 25rem;    
-    padding: 2rem;
+    margin: 0rem 0rem 0rem 5rem; 
+    padding: 4rem;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     border-top: 2px solid rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     color: #fff;
     z-index: 3;
     width: 40%;
     margin-left: 8rem;
-} */
+} 
+.img-thumbnail{
+    border-radius: 50%;
+    width: 58%;
+}
+.footer{
+    font-size: xx-large;
+    color: #ffff;
+    position: absolute;
+    top: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 2rem;
+    margin-bottom: 8rem;
 
+}
+.footer i{
+    border-radius: 50%;
+    padding: 1rem;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+   
+}
+.footer i:hover{
+    color: darkgoldenrod;
+    cursor: pointer;
+}
 
 
 .lat {
@@ -157,4 +186,76 @@ ul li {
     color: #fff;
     margin: 2rem;
     text-align: center;
+}
+.in{    
+    text-decoration: none;
+    padding: 1rem 3.5rem;
+    margin: 2rem 0rem;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: crimson;
+    z-index: 1;
+    font-weight: 400;
+    font-size: 16px;
+    overflow: hidden;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    backdrop-filter: blur(18px);
+}
+.in:hover{
+    letter-spacing: 5px;
+}
+.submit .btns a{
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    text-decoration: none;
+    padding: 1rem 3.5rem;
+    margin: 2rem 0rem;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: green;
+    z-index: 1;
+    font-weight: 400;
+    font-size: 16px;
+    overflow: hidden;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    backdrop-filter: blur(18px);
+}
+.submit .btns a:hover{
+    letter-spacing: 3px;
+    /* background: linear-gradient(90deg, rgba(2,0,36,0.4) 0%, rgba(233,30,99,0.6) 35%, rgba(0,212,255,0.8) 100%);     */
+}
+.submit .btns a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.1),
+    transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+.submit .btns:hover a::before{
+    transform: skewX(45deg) translateX(200%);
+}
+.head{
+    font-size: 50px;
+    font-family: 'Shippori Antique', sans-serif;
+    margin-bottom: 10rem;
+}
+.integrity{
+    margin-top: 10rem;
+    position: relative;
+    
+    
 }
