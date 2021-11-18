@@ -5,6 +5,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
+    WEATHER_API_KEY = os.environ.get('WEATHER_API_KEY')
 
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -16,7 +17,8 @@ class Config:
     # simple mde  configurations
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
-    WEATHER_API_BASE_URL ='http://api.positionstack.com/v1/forward/api_key={}'
+    WEATHER_API_BASE_URL ='https://api.openweathermap.org/data/2.5/weather{}?api_key={}'
+    
 
     @staticmethod
     def init_app(app):
@@ -42,4 +44,3 @@ config_options = {
     'production': ProdConfig,
     'test': TestConfig
 }
-

@@ -14,11 +14,12 @@ def configure_request(app):
 
 
 
-def get_weather(category):
+def get_weather(location):
     '''
     Function that gets the json response to our url request
     '''
-    get_weather_url = base_url.format('api_key')
+    get_weather_url = base_url.format(location, api_key)
+    
 
     with urllib.request.urlopen(get_weather_url) as url:
         get_weather_data = url.read()
@@ -29,6 +30,8 @@ def get_weather(category):
         if get_weather_response['results']:
             weather_results_list = get_weather_response['results']
             weather_results = process_results(weather_results_list)
+            
+    print(weather_results)
 
 
     return weather_results
@@ -45,17 +48,26 @@ def process_results(weather_list):
     '''
     weather_results = []
     for weather_item in weather_list:
-        latitude = weather_item.get('latitude')
-        longitude = weather_item.get('longitude')
-        country= weather_item.get('country')
-        locality = weather_item.get('locality')
-        region = weather_item.get('region')
-        street= weather_item.get('street')
+        coordinates = weather_item.get('coordinates')
+        weather = weather_item.get('weather')
+        main= weather_item.get('main')
+        visibility = weather_item.get('visibility')
         
-    if latitude:
-            weather_object = Weather(latitude,longitude,country,locality,region,street)
+        
+    if coordinates:
+            weather_object = Weather(coordinates,weather,main,visibility)
             weather_results.append(weather_object)
 
 
     return weather_results
+def search_city(city_name):
+    search_city_url = 'https://api.openweathermap.org/data/2.5/weather?appid={}&query={}'.format(api_key,city_name)
+    with urllib.request.urlopen(search_city_url) as url:
+        search_city_data = url.read()
+        search_city_response = json.loads(search_city_data)
+        search_city_results = None
+        if search_city_response['results']:
+            search_city_list = search_city_response['results']
+            search_city_results = process_results(search_city_list)
+    return search_city_results
 

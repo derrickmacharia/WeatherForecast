@@ -48,10 +48,9 @@ class Weather:
     Weather class to define Movie Objects
     '''
 
-    def __init__(self,latitude,longitude,country,locality,region,street):
-        self.latitude =latitude
-        self.longitude = longitude
-        self.country= country
-        self.locality = locality
-        self.region = region
-        self.street = street
+    def __init__(self,coordinates,weather,main,visibility):
+        self.coordinates =coordinates
+        self.weather = weather
+        self.main= main
+        self.visibilitity = visibility
+        
