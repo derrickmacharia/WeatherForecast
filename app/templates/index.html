@@ -1,32 +1,31 @@
-{% extends 'base.html'%}
-
-
-{% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-{% endblock %}
-
-{% block content %}
+{% extends 'base.html'%} {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> {% endblock %} {% block content %}
 
 <body>
     <h1>Welcome to weather forecast</h1>
 
 
     <form method="post">
-      <input type="text" name="place" placeholder="Search for a Movie" class="form-control">
-      <input type="submit"  value="Submit" class="btn btn-default">
-  </form>
-    
+        <input type="text" name="place" placeholder="Search for a City" class="form-control">
+        <input type="submit" value="Submit" class="btn btn-default">
+    </form>
+
     <ul>
-      <li>Humidity:{{ data.humidity }}</li>
-      <li>Latitude:{{ data.latitude }}</li>
-      <li>Pressure:{{ data.pressure }}</li>
-      <li>Temperature:{{ data.temperature }}</li>
+        <li>Humidity:{{ data.humidity }}</li>
+        <li>Latitude:{{ data.latitude }}</li>
+        <li>Pressure:{{ data.pressure }}</li>
+        <li>Day:{{ data.temperature }}</li>
+        <li>Maximum temperature:{{ data.temp_max }}</li>
+        <li>Maximum temperature:{{ data.temp_min }}</li>
+        <li>Visibility:{{ data.visibility }}</li>
+        <li>Sunrise:{{ data.sunrise }}</li>
+        <li>Sunset:{{ data.sunset }}</li>
+        <li>Windspeed:{{ data.speed }}</li>
+
 
     </ul>
-    
+
 </body>
 
 {% endblock%}

@@ -13,6 +13,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
             </ul>
+            <li>
+                <a href="/climate" class="tag" style="color: #EEC390;">Climate</a>
+            </li>
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
                 <li class="user"><a href="{{url_for('main.profile',uname=current_user.username)}}"><i class="fa fa-user" aria-hidden="true"></i>   {{current_user.username}}</a></li>
@@ -20,7 +23,7 @@
                 {% else %}
                 <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
                 {%endif%}
-              </ul>
+            </ul>
         </div>
     </div>
-  </div>
+</div>
