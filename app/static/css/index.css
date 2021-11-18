@@ -1,6 +1,6 @@
-h1{
+/* h1{
     color: blueviolet;
-}
+} */
 .register{
     background-image: url(../images/location.jpeg);
     background-size: cover;
@@ -45,3 +45,19 @@ h1{
     z-index: 3;
     width: 75%;
 }  
+.navbar.container-fluid{
+    background: white ;
+}
+.navbar-brand{
+    color: white;
+
+}
+#intro{
+    position: relative;
+}
+.bg-dark{
+    background-color: transparent !important;
+}
+ content > h1{
+    color:red;
+}
