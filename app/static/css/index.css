@@ -52,14 +52,14 @@ ul li {
     list-style: none;
 }
 
-.search {
+.search form {
     padding: 2rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.2);
     border-top: 2px solid rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     color: #fff;
-    margin: 2rem;
+    margin: 2rem 2rem;
 }
 
 .fore {
@@ -91,4 +91,71 @@ ul li {
     color: #fff;
     margin: 2rem;
     text-align: center;
+}
+
+.set {
+    color: rgb(240, 161, 14);
+    font-size: xx-large;
+}
+
+.rise {
+    color: yellow;
+    font-size: xx-large;
+}
+
+.water {
+    color: blue;
+    font-size: xx-large;
+}
+
+.high {
+    color: crimson;
+    font-size: xx-large;
+}
+
+.low {
+    color: rgb(247, 148, 168);
+    font-size: xx-large;
+}
+
+.day {
+    color: rgb(226, 241, 15);
+    font-size: xx-large;
+}
+
+.wind {
+    color: rgb(2, 36, 36);
+    font-size: xx-large;
+}
+
+.comp {
+    color: rgb(238, 142, 87);
+    font-size: xx-large;
+}
+
+.fog {
+    color: rgb(230, 223, 220);
+    font-size: xx-large;
+}
+
+.press {
+    color: rgb(119, 217, 247);
+    font-size: xx-large;
+}
+
+.hum p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hum p i {
+    margin-right: 10px;
+}
+
+.hum p span {
+    font-weight: 700;
+}
+
+.space {
+    width: 100%;
 }

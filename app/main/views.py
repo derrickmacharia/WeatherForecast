@@ -47,6 +47,7 @@ def index():
 
 
 @main.route('/search',methods=['GET','POST'])
+@login_required
 def search():
     '''
     View root page function that returns the index page and its data.
@@ -57,7 +58,10 @@ def search():
     weather_data = requests.get(base_url).json()
     pprint(Util.parse_weather_data(weather_data))
     data = Util.parse_weather_data(weather_data)
-    
+
+    if city is None:
+        abort(404)
+
     if request.method == 'POST':
         city = request.form.get("place")
         base_url = "https://api.openweathermap.org/data/2.5/weather?appid="+Config.API_Key+"&q=" + city
