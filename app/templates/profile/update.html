@@ -9,7 +9,15 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-  {{wtf.quick_form(form,button_map={'submit':'danger'})}}
-</div>
+<body class="update">
+  <div class="container upd">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 date">
+    {{wtf.quick_form(form,button_map={'submit':'danger'})}}
+  </div>
+    <div class="col-md-2"></div>
+  </div>
+  </div>
+</body>
 {% endblock %}

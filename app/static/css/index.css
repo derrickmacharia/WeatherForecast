@@ -1,5 +1,8 @@
-h1{
+/* h1{
     color: blueviolet;
+} */
+.navigate a{
+    color: white;
 }
 .register{
     background-image: url(../images/location.jpeg);
@@ -8,8 +11,6 @@ h1{
     background-repeat: no-repeat;
     z-index: 1;
     height: 100vh;
-    
-
 
 }
 .voldermort{
@@ -32,11 +33,10 @@ h1{
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-
-
 }
 .sativa{
     margin-top: 15rem;
+
     padding: 2rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
@@ -46,3 +46,68 @@ h1{
     z-index: 3;
     width: 75%;
 }  
+.profile{
+    background-image: url(../images/sunny.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.prof{
+    margin-top: 25rem;    
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    z-index: 3;
+    width: 40%;
+    margin-left: 4rem;
+}
+.prof2{
+    margin-top: 25rem;    
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    z-index: 3;
+    width: 40%;
+    margin-left: 8rem;
+}
+
+/* .update{
+    background-image: url(../images/dusk.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+.upd{
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    z-index: 3;
+    width: 75%;
+    margin-top: 15rem;
+}
+.date{
+    margin-top: 25rem;    
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    z-index: 3;
+    width: 40%;
+    margin-left: 8rem;
+} */
+

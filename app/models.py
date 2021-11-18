@@ -1,4 +1,3 @@
-
 from . import db,login_manager
 from datetime import datetime
 from werkzeug.security import generate_password_hash,check_password_hash
@@ -42,3 +41,4 @@ class User(UserMixin,db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+

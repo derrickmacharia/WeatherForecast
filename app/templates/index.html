@@ -4,15 +4,41 @@
 {% block styles%}
     {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='js/particles.js')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='js/app.js')}}">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
   integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Shippori+Antique&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
 
 <body>
-    <h1>Welcome to weather forecast</h1>
+  <style>
+    #particles-js{
+    background-image: url(static/images/dull.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+  </style>
+  <div id="particles-js">
+    <div class="text-center" style="color: white;font-weight: bold;font-size: x-large;font-family: 'Shippori Antique', sans-serif;position: absolute;top: 35%;left: 36%;">
+      <h2 class="display-2" style=" box-shadow: 0 0 1px rgb(233, 218, 14), 0 0 5px rgb(241, 34, 15), 0 0 10px rgb(248, 185, 13);">Weather Forecast</h2>
+      <p>Welcome to the weather forecast</p><br>
+      <p>Now let's see what the weather is</p><br>
+      <p>is like today</p>
+      <a href="{{url_for('auth.register')}}"><button class="bg-danger submit" style="border-radius: 20px;padding: 5px;">Sign up</button></a>
+    </div>
+  </div>
+<script src="static/js/particles.js"></script>
+<script src="static/js/app.js"></script>
     
 </body>
+
 
 {% endblock%}
