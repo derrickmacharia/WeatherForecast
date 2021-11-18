@@ -8,13 +8,12 @@ from ..models import User
 from .forms import UpdateProfile
 from .. import db,photos
 import requests
-from ..utils import Util
+from ..utils import Util,Climate
 from pprint import pprint
 import urllib.request,json
 from config import Config
 
 @main.route('/',methods=['GET','POST'])
-
 def index():
     '''
     View root page function that returns the index page and its data.
@@ -54,11 +53,65 @@ def search():
 
         pprint(Util.parse_weather_data(weather_data))
         data = Util.parse_weather_data(weather_data)
+    return render_template('index.html',data = data)
+
+
+@main.route('/search',methods=['GET','POST'])
+def search():
+    '''
+    View root page function that returns the index page and its data.
+    '''
+    title = 'WeatherForecast'
+    city = "Nairobi"
+    base_url = "https://api.openweathermap.org/data/2.5/weather?appid="+Config.API_Key+"&q=" + city
+    weather_data = requests.get(base_url).json()
+    pprint(Util.parse_weather_data(weather_data))
+    data = Util.parse_weather_data(weather_data)
+    
+    if request.method == 'POST':
+        city = request.form.get("place")
+        base_url = "https://api.openweathermap.org/data/2.5/weather?appid="+Config.API_Key+"&q=" + city
+        weather_data = requests.get(base_url).json()
+        pprint(Util.parse_weather_data(weather_data))
+        data = Util.parse_weather_data(weather_data)
     return render_template('search.html', title = title, data = data)
 
 
 
 
+
+# @main.route('/climate',methods=['GET','POST'])
+# @login_required
+# def climate():
+#     '''
+#     View root page function that returns the index page and its data.
+#     '''
+#     title = 'WeatherForecast'
+
+#     city = "Nakuru"
+
+#     base_url = "https://pro.openweathermap.org/data/2.5/forecast/climate?q="+ city +"&appid="+Config.API_Key
+#     # base_url = "https://pro.openweathermap.org/data/2.5/forecast/climate?appid="+Config.API_Key+"&q" + city
+
+#     climate_data = requests.get(base_url).json()
+#     pprint(Climate.parse_climate_data(climate_data))
+#     climate_data = Climate.parse_climate_data(climate_data)
+  
+#     if request.method == 'POST':
+
+#         city = request.form.get("climate")
+
+       
+#         base_url = "https://pro.openweathermap.org/data/2.5/forecast/climate?q="+ city +"&appid="+Config.API_Key
+#         # base_url = "https://api.openweathermap.org/data/2.5/forecast/climate?appid="+Config.API_Key+"&q=" + city
+
+#         climate_data = requests.get(base_url).json()
+
+#         pprint(Climate.parse_climate_data(climate_data))
+#         climate_data = Climate.parse_climate_data(climate_data)
+#     return render_template('climate.html', title = title, climate_data = climate_data)
+
+    
 
 
 @main.route('/user/<uname>')
