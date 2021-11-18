@@ -1,4 +1,3 @@
-
 from . import db,login_manager
 from datetime import datetime
 from werkzeug.security import generate_password_hash,check_password_hash
@@ -42,3 +41,30 @@ class User(UserMixin,db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+
+# class Review:
+
+#     all_reviews = []
+
+#     def __init__(self,weather_id,title,review):
+#         self.weather_id = weather_id
+#         self.title = title
+#         self.review = review
+
+
+#     def save_review(self):
+#         Review.all_reviews.append(self)
+
+
+#     @classmethod
+#     def clear_reviews(cls):
+#         Review.all_reviews.clear()
+#     @classmethod
+#     def get_reviews(cls,id):
+#         response = []
+
+#         for review in cls.all_reviews:
+#             if review.weather_id == id:
+#                 response.append(review)
+
+#         return response
