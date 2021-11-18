@@ -1,3 +1,4 @@
+
 class  Util:
     @staticmethod
     def parse_weather_data(response):
@@ -14,5 +15,7 @@ class  Util:
             "pressure":pressure,
             "temperature":temperature
         }
-        
+
         return data
+
+

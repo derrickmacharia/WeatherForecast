@@ -21,6 +21,18 @@ def index():
     '''
     title = 'WeatherForecast'
 
+
+    return render_template('index.html', title = title)
+
+
+
+@main.route('/search',methods=['GET','POST'])
+def search():
+    '''
+    View root page function that returns the index page and its data.
+    '''
+    title = 'WeatherForecast'
+
     city = "Nairobi"
 
 
@@ -42,9 +54,13 @@ def index():
 
         pprint(Util.parse_weather_data(weather_data))
         data = Util.parse_weather_data(weather_data)
-    return render_template('index.html', title = title, data = data)
+    return render_template('search.html', title = title, data = data)
 
-    
+
+
+
+
+
 @main.route('/user/<uname>')
 def profile(uname):
     user = User.query.filter_by(username = uname).first()
