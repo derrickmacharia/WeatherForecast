@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html'%}
 
 
@@ -38,6 +39,17 @@
 <script src="static/js/particles.js"></script>
 <script src="static/js/app.js"></script>
     
+=======
+{% extends 'base.html'%} {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> {% endblock %} {% block content %}
+
+<body>
+    <h1>Welcome to weather forecast</h1>
+
+
+
+>>>>>>> 30a3e4b947d931a7f2f03217e565c3528ae6c28a
 </body>
 
 

@@ -1,0 +1,24 @@
+{% extends 'base.html'%} {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> {% endblock %} {% block content %}
+
+<body>
+    <form method="post">
+        <input type="text" name="climate" placeholder="Search for a City" class="form-control">
+        <input type="submit" value="Submit" class="btn btn-default">
+    </form>
+
+    <ul>
+        <!-- <li>Latitude:{{ climate_data.latitude }}</li>
+        <li>Longitude:{{ climate_data.longitude }}</li> -->
+        <li>Day:{{ climate_data.day }}</li>
+        <li>Minimum temperature:{{ climate_data.min }}</li>
+        <li>Maximum temperature:{{ climate_data.max }}</li>
+        <li>Night:{{ climate_data.night }}</li>
+        <li>Evening:{{ climate_data.eve }}</li>
+        <li>Morning:{{ climate_data.morn }}</li>
+
+
+    </ul>
+</body>
+{% endblock%}
