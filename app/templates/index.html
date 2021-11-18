@@ -11,7 +11,54 @@
 {% block content %}
 
 <body>
-    <h1>Welcome to weather forecast</h1>
+  <header>
+    <style>
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+      .content{
+    
+        height: 100%;
+        width: 100%;
+        z-index: 20;
+        position: absolute;
+        top:50;
+        left:50;
+    }
+    .content h1{
+        color: #fff !important;
+        font-weight:600px;
+    }
+    .content p{
+        color: #fff !important;
+        font-weight:300px;
+    }
+    </style>
+
+    <!-- Navbar -->
+    <div class="content">
+      <div class="container">
+        <h1 text-white>Welcome to weather forecast</h1>
+        <p>Enjoy of the best weather conditions</p>
+      </div>
+    </div>
+    <!-- Background image -->
+    <div id="intro" class="bg-image vh-100 shadow-1-strong">
+      <video style="min-width: 100%; min-height: 100%;" playsinline autoplay muted loop>
+        <source class="h-100" src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+      </video>
+      
+    </div>
+    <!-- Background image -->
+    
+  </header>
     
 </body>
 
