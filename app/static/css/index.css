@@ -1,18 +1,17 @@
-h1{
+h1 {
     color: blueviolet;
 }
-.register{
+
+.register {
     background-image: url(../images/location.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
     height: 100vh;
-    
-
-
 }
-.voldermort{
+
+.voldermort {
     padding: 2rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.2);
@@ -23,19 +22,20 @@ h1{
     width: 75%;
     margin-top: 8rem;
 }
-.kemikal{
-    background: transparent ;
+
+.kemikal {
+    background: transparent;
 }
-.login{
+
+.login {
     background-image: url(../images/sky2.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-
-
 }
-.sativa{
+
+.sativa {
     margin-top: 15rem;
     padding: 2rem;
     border-radius: 20px;
@@ -45,4 +45,50 @@ h1{
     color: #fff;
     z-index: 3;
     width: 75%;
-}  
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.search {
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin: 2rem;
+}
+
+.fore {
+    background: url(../images/empty.jpeg);
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.lat {
+    padding: 3rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.hum {
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin: 2rem;
+    text-align: center;
+}
