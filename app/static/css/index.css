@@ -95,8 +95,8 @@
     width: 40%;
     margin-left: 8rem;
 }
-
-/* .update{
+/*
+ .update{
     background-image: url(../images/dusk.jpeg);
 }
 
@@ -118,13 +118,7 @@ ul li {
 .fore {
     background: url(../images/empty.jpeg);
     color: #fff;
- .update{
-    background-image: url(../images/star.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
+
 
 ul li {
     text-decoration: none;
@@ -149,21 +143,29 @@ ul li {
     background-repeat: no-repeat;
     height: 100vh;
 
-}
-.upd{
-    /* padding: 2rem;
+}*/
+/* .upd{
+     padding: 2rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.3);
     border-top: 2px solid rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     color: #fff;
-    z-index: 3; */
-    /* width: 75%;
-    margin-top: 15rem; */
+    z-index: 3; 
+    /* width: 75%; 
+    margin-top: 15rem; 
+} */
 
+.update{
+    background-image: url(../images/star.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
 .date{
-    margin: 0rem 0rem 0rem 5rem; 
-    padding: 4rem;
+    margin: 15rem 0rem 0rem 5rem; 
+    padding: 4rem 6rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.2);
     border-top: 2px solid rgba(255, 255, 255, 0.1);
@@ -222,7 +224,9 @@ ul li {
 
     margin: 5rem;
 }
-
+.good{
+    margin-top: 3rem;
+}
 .fore {
     background: url(../images/empty.jpeg);
     color: #fff;
@@ -230,7 +234,6 @@ ul li {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    margin-top: 6rem;
 }
 
 .lat {
