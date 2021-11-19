@@ -176,8 +176,9 @@ ul li {
     margin-left: 8rem;
 } 
 .img-thumbnail{
+    margin-left: 8rem;
     border-radius: 50%;
-    width: 58%;
+    width: 60%;
 }
 .footer{
     font-size: xx-large;
